@@ -15,7 +15,7 @@ const FloatingChatButton: React.FC = () => {
           className="bg-[#214130] text-white font-semibold px-4 py-3 rounded-full shadow-lg flex items-center gap-2 transition-all"
         >
           <MessageCircle size={18} />
-          Let's Talk
+          Lets Talk
         </button>
       </div>
 

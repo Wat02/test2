@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import Illustration from "@/public/illustration3.png";
-import { section } from "motion/react-client";
 
 function Col() {
   return (
