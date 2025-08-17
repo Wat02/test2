@@ -10,6 +10,8 @@ import {
 } from "framer-motion";
 import type { Variants, Target } from "framer-motion";
 
+import marketingImage from "@/public/marketing.jpg";
+
 type Metric = {
   label: string;
   value: string;
@@ -26,7 +28,7 @@ type TestimonialType = {
 const testimonials: TestimonialType[] = [
   {
     company: "TetraFlow",
-    image: require("@/public/marketing.jpg"),
+    image: marketingImage,
     quote:
       " Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero rem beatae, similique voluptatum obcaecati veritatis nemo dolores. Minus repellendus rerum expedita iusto atque ipsam voluptates tempore itaque, sunt non eos.",
     highlight: "Totam laborum perferendis aut nisi modi.",
@@ -37,7 +39,7 @@ const testimonials: TestimonialType[] = [
   },
   {
     company: "NovaX",
-    image: require("@/public/marketing.jpg"),
+    image: marketingImage,
     quote:
       " Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero rem beatae, similique voluptatum obcaecati veritatis nemo dolores. Minus repellendus rerum expedita iusto atque ipsam voluptates tempore itaque, sunt non eos.",
     highlight: "Massive 200% boost in engagement.",
@@ -48,7 +50,7 @@ const testimonials: TestimonialType[] = [
   },
   {
     company: "AlphaCore",
-    image: require("@/public/marketing.jpg"),
+    image: marketingImage,
     quote: "Their strategy changed our growth game.",
     highlight: "Revenue doubled in 6 months.",
     metrics: [
@@ -375,7 +377,7 @@ const Testimonial: React.FC = () => {
   const [[index, direction], setIndex] = useState<[number, number]>([0, 0]);
   const [isPaused, setIsPaused] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const { isMobile, isTablet } = useResponsive();
+  const { isMobile } = useResponsive();
 
   const progress = useSpring(0, { stiffness: 100, damping: 30 });
   const progressWidth = useTransform(progress, [0, 1], ["0%", "100%"]);
